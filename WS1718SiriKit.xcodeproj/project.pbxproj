@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		081ACE621FC87AE200F3E418 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081ACE611FC87AE200F3E418 /* AppDelegate.swift */; };
+		081ACE641FC87AE200F3E418 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081ACE631FC87AE200F3E418 /* ViewController.swift */; };
+		081ACE671FC87AE200F3E418 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 081ACE651FC87AE200F3E418 /* Main.storyboard */; };
+		081ACE691FC87AE200F3E418 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 081ACE681FC87AE200F3E418 /* Assets.xcassets */; };
+		081ACE6C1FC87AE200F3E418 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 081ACE6A1FC87AE200F3E418 /* LaunchScreen.storyboard */; };
+		081ACE771FC87AE200F3E418 /* WS1718SiriKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081ACE761FC87AE200F3E418 /* WS1718SiriKitTests.swift */; };
+		081ACE821FC87AE200F3E418 /* WS1718SiriKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081ACE811FC87AE200F3E418 /* WS1718SiriKitUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		081ACE731FC87AE200F3E418 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 081ACE561FC87AE100F3E418 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 081ACE5D1FC87AE200F3E418;
+			remoteInfo = WS1718SiriKit;
+		};
+		081ACE7E1FC87AE200F3E418 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 081ACE561FC87AE100F3E418 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 081ACE5D1FC87AE200F3E418;
+			remoteInfo = WS1718SiriKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		081ACE5E1FC87AE200F3E418 /* WS1718SiriKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WS1718SiriKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		081ACE611FC87AE200F3E418 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		081ACE631FC87AE200F3E418 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		081ACE661FC87AE200F3E418 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		081ACE681FC87AE200F3E418 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		081ACE6B1FC87AE200F3E418 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		081ACE6D1FC87AE200F3E418 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		081ACE721FC87AE200F3E418 /* WS1718SiriKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WS1718SiriKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		081ACE761FC87AE200F3E418 /* WS1718SiriKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WS1718SiriKitTests.swift; sourceTree = "<group>"; };
+		081ACE781FC87AE200F3E418 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		081ACE7D1FC87AE200F3E418 /* WS1718SiriKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WS1718SiriKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		081ACE811FC87AE200F3E418 /* WS1718SiriKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WS1718SiriKitUITests.swift; sourceTree = "<group>"; };
+		081ACE831FC87AE200F3E418 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		081ACE5B1FC87AE200F3E418 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		081ACE6F1FC87AE200F3E418 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		081ACE7A1FC87AE200F3E418 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		081ACE551FC87AE100F3E418 = {
+			isa = PBXGroup;
+			children = (
+				081ACE601FC87AE200F3E418 /* WS1718SiriKit */,
+				081ACE751FC87AE200F3E418 /* WS1718SiriKitTests */,
+				081ACE801FC87AE200F3E418 /* WS1718SiriKitUITests */,
+				081ACE5F1FC87AE200F3E418 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		081ACE5F1FC87AE200F3E418 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				081ACE5E1FC87AE200F3E418 /* WS1718SiriKit.app */,
+				081ACE721FC87AE200F3E418 /* WS1718SiriKitTests.xctest */,
+				081ACE7D1FC87AE200F3E418 /* WS1718SiriKitUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		081ACE601FC87AE200F3E418 /* WS1718SiriKit */ = {
+			isa = PBXGroup;
+			children = (
+				081ACE611FC87AE200F3E418 /* AppDelegate.swift */,
+				081ACE631FC87AE200F3E418 /* ViewController.swift */,
+				081ACE651FC87AE200F3E418 /* Main.storyboard */,
+				081ACE681FC87AE200F3E418 /* Assets.xcassets */,
+				081ACE6A1FC87AE200F3E418 /* LaunchScreen.storyboard */,
+				081ACE6D1FC87AE200F3E418 /* Info.plist */,
+			);
+			path = WS1718SiriKit;
+			sourceTree = "<group>";
+		};
+		081ACE751FC87AE200F3E418 /* WS1718SiriKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				081ACE761FC87AE200F3E418 /* WS1718SiriKitTests.swift */,
+				081ACE781FC87AE200F3E418 /* Info.plist */,
+			);
+			path = WS1718SiriKitTests;
+			sourceTree = "<group>";
+		};
+		081ACE801FC87AE200F3E418 /* WS1718SiriKitUITests */ = {
+			isa = PBXGroup;
+			children = (
+				081ACE811FC87AE200F3E418 /* WS1718SiriKitUITests.swift */,
+				081ACE831FC87AE200F3E418 /* Info.plist */,
+			);
+			path = WS1718SiriKitUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		081ACE5D1FC87AE200F3E418 /* WS1718SiriKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 081ACE861FC87AE200F3E418 /* Build configuration list for PBXNativeTarget "WS1718SiriKit" */;
+			buildPhases = (
+				081ACE5A1FC87AE200F3E418 /* Sources */,
+				081ACE5B1FC87AE200F3E418 /* Frameworks */,
+				081ACE5C1FC87AE200F3E418 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WS1718SiriKit;
+			productName = WS1718SiriKit;
+			productReference = 081ACE5E1FC87AE200F3E418 /* WS1718SiriKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		081ACE711FC87AE200F3E418 /* WS1718SiriKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 081ACE891FC87AE200F3E418 /* Build configuration list for PBXNativeTarget "WS1718SiriKitTests" */;
+			buildPhases = (
+				081ACE6E1FC87AE200F3E418 /* Sources */,
+				081ACE6F1FC87AE200F3E418 /* Frameworks */,
+				081ACE701FC87AE200F3E418 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				081ACE741FC87AE200F3E418 /* PBXTargetDependency */,
+			);
+			name = WS1718SiriKitTests;
+			productName = WS1718SiriKitTests;
+			productReference = 081ACE721FC87AE200F3E418 /* WS1718SiriKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		081ACE7C1FC87AE200F3E418 /* WS1718SiriKitUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 081ACE8C1FC87AE200F3E418 /* Build configuration list for PBXNativeTarget "WS1718SiriKitUITests" */;
+			buildPhases = (
+				081ACE791FC87AE200F3E418 /* Sources */,
+				081ACE7A1FC87AE200F3E418 /* Frameworks */,
+				081ACE7B1FC87AE200F3E418 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				081ACE7F1FC87AE200F3E418 /* PBXTargetDependency */,
+			);
+			name = WS1718SiriKitUITests;
+			productName = WS1718SiriKitUITests;
+			productReference = 081ACE7D1FC87AE200F3E418 /* WS1718SiriKitUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		081ACE561FC87AE100F3E418 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "RWTH Aachen University (Media Computing Group)";
+				TargetAttributes = {
+					081ACE5D1FC87AE200F3E418 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					081ACE711FC87AE200F3E418 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 081ACE5D1FC87AE200F3E418;
+					};
+					081ACE7C1FC87AE200F3E418 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 081ACE5D1FC87AE200F3E418;
+					};
+				};
+			};
+			buildConfigurationList = 081ACE591FC87AE100F3E418 /* Build configuration list for PBXProject "WS1718SiriKit" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 081ACE551FC87AE100F3E418;
+			productRefGroup = 081ACE5F1FC87AE200F3E418 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				081ACE5D1FC87AE200F3E418 /* WS1718SiriKit */,
+				081ACE711FC87AE200F3E418 /* WS1718SiriKitTests */,
+				081ACE7C1FC87AE200F3E418 /* WS1718SiriKitUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		081ACE5C1FC87AE200F3E418 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				081ACE6C1FC87AE200F3E418 /* LaunchScreen.storyboard in Resources */,
+				081ACE691FC87AE200F3E418 /* Assets.xcassets in Resources */,
+				081ACE671FC87AE200F3E418 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		081ACE701FC87AE200F3E418 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		081ACE7B1FC87AE200F3E418 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		081ACE5A1FC87AE200F3E418 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				081ACE641FC87AE200F3E418 /* ViewController.swift in Sources */,
+				081ACE621FC87AE200F3E418 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		081ACE6E1FC87AE200F3E418 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				081ACE771FC87AE200F3E418 /* WS1718SiriKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		081ACE791FC87AE200F3E418 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				081ACE821FC87AE200F3E418 /* WS1718SiriKitUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		081ACE741FC87AE200F3E418 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 081ACE5D1FC87AE200F3E418 /* WS1718SiriKit */;
+			targetProxy = 081ACE731FC87AE200F3E418 /* PBXContainerItemProxy */;
+		};
+		081ACE7F1FC87AE200F3E418 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 081ACE5D1FC87AE200F3E418 /* WS1718SiriKit */;
+			targetProxy = 081ACE7E1FC87AE200F3E418 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		081ACE651FC87AE200F3E418 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				081ACE661FC87AE200F3E418 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		081ACE6A1FC87AE200F3E418 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				081ACE6B1FC87AE200F3E418 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		081ACE841FC87AE200F3E418 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		081ACE851FC87AE200F3E418 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		081ACE871FC87AE200F3E418 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W88773838E;
+				INFOPLIST_FILE = WS1718SiriKit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.rwth-aachen.hci.WS1718SiriKit";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		081ACE881FC87AE200F3E418 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W88773838E;
+				INFOPLIST_FILE = WS1718SiriKit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.rwth-aachen.hci.WS1718SiriKit";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		081ACE8A1FC87AE200F3E418 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W88773838E;
+				INFOPLIST_FILE = WS1718SiriKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.rwth-aachen.hci.WS1718SiriKitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WS1718SiriKit.app/WS1718SiriKit";
+			};
+			name = Debug;
+		};
+		081ACE8B1FC87AE200F3E418 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W88773838E;
+				INFOPLIST_FILE = WS1718SiriKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.rwth-aachen.hci.WS1718SiriKitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WS1718SiriKit.app/WS1718SiriKit";
+			};
+			name = Release;
+		};
+		081ACE8D1FC87AE200F3E418 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W88773838E;
+				INFOPLIST_FILE = WS1718SiriKitUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.rwth-aachen.hci.WS1718SiriKitUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WS1718SiriKit;
+			};
+			name = Debug;
+		};
+		081ACE8E1FC87AE200F3E418 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W88773838E;
+				INFOPLIST_FILE = WS1718SiriKitUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.rwth-aachen.hci.WS1718SiriKitUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WS1718SiriKit;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		081ACE591FC87AE100F3E418 /* Build configuration list for PBXProject "WS1718SiriKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				081ACE841FC87AE200F3E418 /* Debug */,
+				081ACE851FC87AE200F3E418 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		081ACE861FC87AE200F3E418 /* Build configuration list for PBXNativeTarget "WS1718SiriKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				081ACE871FC87AE200F3E418 /* Debug */,
+				081ACE881FC87AE200F3E418 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		081ACE891FC87AE200F3E418 /* Build configuration list for PBXNativeTarget "WS1718SiriKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				081ACE8A1FC87AE200F3E418 /* Debug */,
+				081ACE8B1FC87AE200F3E418 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		081ACE8C1FC87AE200F3E418 /* Build configuration list for PBXNativeTarget "WS1718SiriKitUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				081ACE8D1FC87AE200F3E418 /* Debug */,
+				081ACE8E1FC87AE200F3E418 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 081ACE561FC87AE100F3E418 /* Project object */;
+}
