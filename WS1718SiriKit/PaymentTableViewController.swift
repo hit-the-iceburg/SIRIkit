@@ -21,6 +21,7 @@ class PaymentTableViewController : UITableViewController {
         
     }
     
+    
     //Display contents
     override func tableView(_ tableView: UITableView,
                                numberOfRowsInSection section: Int) -> Int
@@ -55,7 +56,16 @@ class PaymentTableViewController : UITableViewController {
         }
     }
     
-    @IBAction func unwindToToDoList(segue: UIStoryboardSegue) {}
+    @IBAction func unwindToPaymentHistory(segue: UIStoryboardSegue) {
+        guard segue.identifier == "saveUnwind" else { return }
+        let sourceViewController = segue.source as! NewPaymentViewController
+        
+        if let payment = sourceViewController.payment {
+            let newIndexPath = IndexPath(row: model.getPaymentHistory().count, section: 0)
+            model.addPayment(newPayment: payment)
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
+        }
+    }
 
 
 }

@@ -9,7 +9,7 @@
 import Foundation
 class PaymentHistoryModel {
     //hard coding contact list for now
-    let contacts = ["Sally Bebawi","Susan Xue","Ajay","Tim Cook"]
+    let contacts = ["Sally","Susan","Ajay"]
     var paymentHistory = [Payment]()
     
     func getPaymentHistory() -> [Payment] {
@@ -18,6 +18,10 @@ class PaymentHistoryModel {
     
     func addPayment(payee: String, amount: Double) {
         let newPayment = Payment(payee: payee, amount: amount)
+        paymentHistory.append(newPayment)
+        //might need to update the viewcontroller here
+    }
+    func addPayment(newPayment: Payment) {
         paymentHistory.append(newPayment)
         //might need to update the viewcontroller here
     }

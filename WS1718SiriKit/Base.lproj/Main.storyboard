@@ -67,7 +67,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uJX-nN-NPe">
                                                     <rect key="frame" x="32" y="8" width="114" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Select Contact"/>
+                                                    <state key="normal" title="Enter Contact">
+                                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    </state>
                                                 </button>
                                                 <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZW8-gm-afx">
                                                     <rect key="frame" x="161" y="5" width="173" height="30"/>
@@ -77,6 +79,7 @@
                                                     <textInputTraits key="textInputTraits" textContentType="name"/>
                                                     <connections>
                                                         <action selector="contactFieldChanged:" destination="EEM-Vs-G4X" eventType="editingChanged" id="yGC-AW-E1I"/>
+                                                        <action selector="contactReturnPressed:" destination="EEM-Vs-G4X" eventType="primaryActionTriggered" id="DCe-xX-c52"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -100,7 +103,8 @@
                                                     <rect key="frame" x="160" y="6" width="173" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                     <connections>
                                                         <action selector="amountFieldChanged:" destination="EEM-Vs-G4X" eventType="editingChanged" id="0py-xA-lzd"/>
                                                     </connections>
@@ -127,12 +131,12 @@
                     <navigationItem key="navigationItem" title="New Payment" id="b9A-Yj-TBi">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="mfK-9J-zkG">
                             <connections>
-                                <segue destination="Zbh-c8-bpU" kind="unwind" unwindAction="unwindToToDoListWithSegue:" id="4BS-jn-i4H"/>
+                                <segue destination="Zbh-c8-bpU" kind="unwind" unwindAction="unwindToPaymentHistoryWithSegue:" id="LR6-xm-kes"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="mlF-YH-Seg">
                             <connections>
-                                <segue destination="Zbh-c8-bpU" kind="unwind" identifier="saveUnwind" unwindAction="unwindToToDoListWithSegue:" id="Vdi-Uk-G5E"/>
+                                <segue destination="Zbh-c8-bpU" kind="unwind" identifier="saveUnwind" unwindAction="unwindToPaymentHistoryWithSegue:" id="nF3-Mu-rjs"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -151,7 +155,6 @@
         <!--Navigation Controller-->
         <scene sceneID="Jkk-a2-m24">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WMZ-tT-zBl" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="Ft8-F9-fbB" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0X9-Og-Y7T">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -161,6 +164,7 @@
                         <segue destination="EEM-Vs-G4X" kind="relationship" relationship="rootViewController" id="ArK-aY-wio"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WMZ-tT-zBl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="729" y="257"/>
         </scene>
