@@ -8,7 +8,8 @@
 
 import Foundation
 class PaymentHistoryModel {
-   
+    //hard coding contact list for now
+    let contacts = ["Sally Bebawi","Susan Xue","Ajay","Tim Cook"]
     var paymentHistory = [Payment]()
     
     func getPaymentHistory() -> [Payment] {
@@ -16,13 +17,15 @@ class PaymentHistoryModel {
     }
     
     func addPayment(payee: String, amount: Double) {
-        newPayment = Payment(payee, amount)
+        let newPayment = Payment(payee: payee, amount: amount)
         paymentHistory.append(newPayment)
+        //might need to update the viewcontroller here
     }
 
-//    func deletePayment(){
-//
-//    }
+    func deletePayment(rowNum: Int){
+        paymentHistory.remove(at: rowNum)
+        //might need to update the viewcontroller here
+    }
 
     func loadPaymentHistory() -> [Payment]? {
         return nil

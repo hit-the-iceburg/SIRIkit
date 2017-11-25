@@ -17,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
+        
+        //might need to add request for Siri usage
+        //might need to add request for Contacts usage
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

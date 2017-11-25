@@ -22,6 +22,7 @@
 		08C56D111FC97E81000B6345 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C56D101FC97E81000B6345 /* Payment.swift */; };
 		08C56D131FC97FA1000B6345 /* PaymentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C56D121FC97FA1000B6345 /* PaymentTableViewController.swift */; };
 		08C56D151FC99218000B6345 /* PaymentHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C56D141FC99218000B6345 /* PaymentHistoryModel.swift */; };
+		08C56D171FC9D05E000B6345 /* NewPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C56D161FC9D05D000B6345 /* NewPaymentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		08C56D101FC97E81000B6345 /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
 		08C56D121FC97FA1000B6345 /* PaymentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTableViewController.swift; sourceTree = "<group>"; };
 		08C56D141FC99218000B6345 /* PaymentHistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentHistoryModel.swift; sourceTree = "<group>"; };
+		08C56D161FC9D05D000B6345 /* NewPaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPaymentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 				081ACE8F1FC87AF900F3E418 /* WS1718SiriKit.entitlements */,
 				081ACE611FC87AE200F3E418 /* AppDelegate.swift */,
 				081ACE651FC87AE200F3E418 /* Main.storyboard */,
+				08C56D161FC9D05D000B6345 /* NewPaymentViewController.swift */,
 				081ACE681FC87AE200F3E418 /* Assets.xcassets */,
 				081ACE6A1FC87AE200F3E418 /* LaunchScreen.storyboard */,
 				081ACE6D1FC87AE200F3E418 /* Info.plist */,
@@ -424,6 +427,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08C56D171FC9D05E000B6345 /* NewPaymentViewController.swift in Sources */,
 				08C56D151FC99218000B6345 /* PaymentHistoryModel.swift in Sources */,
 				08C56D131FC97FA1000B6345 /* PaymentTableViewController.swift in Sources */,
 				08C56D111FC97E81000B6345 /* Payment.swift in Sources */,

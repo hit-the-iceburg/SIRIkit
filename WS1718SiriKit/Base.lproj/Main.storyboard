@@ -26,16 +26,143 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="ijm-qe-L2y" id="vfn-Gd-cMX"/>
                             <outlet property="delegate" destination="ijm-qe-L2y" id="EVU-FO-bcA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Payment History" id="doY-ox-Ssq"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Payment History" id="doY-ox-Ssq">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="qyN-j4-qn5">
+                            <connections>
+                                <segue destination="Ft8-F9-fbB" kind="presentation" id="7bI-VE-7kX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TUZ-YJ-qHD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="603" y="434"/>
+            <point key="canvasLocation" x="-14" y="257"/>
+        </scene>
+        <!--New Payment-->
+        <scene sceneID="6Oz-NF-YkB">
+            <objects>
+                <tableViewController id="EEM-Vs-G4X" customClass="NewPaymentViewController" customModule="WS1718SiriKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="joe-jN-rhW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="P7I-J4-nR9">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="3IZ-ev-1RJ">
+                                        <rect key="frame" x="0.0" y="35" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3IZ-ev-1RJ" id="YAP-cW-gAH">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uJX-nN-NPe">
+                                                    <rect key="frame" x="32" y="8" width="114" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Select Contact"/>
+                                                </button>
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZW8-gm-afx">
+                                                    <rect key="frame" x="161" y="5" width="173" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                    <connections>
+                                                        <action selector="contactFieldChanged:" destination="EEM-Vs-G4X" eventType="editingChanged" id="yGC-AW-E1I"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="cJC-vI-e2K">
+                                        <rect key="frame" x="0.0" y="79" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cJC-vI-e2K" id="8o8-6g-W7A">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Enter Amount" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRg-LY-llM">
+                                                    <rect key="frame" x="26" y="3" width="126" height="36"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zj2-Rp-XOy">
+                                                    <rect key="frame" x="160" y="6" width="173" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="amountFieldChanged:" destination="EEM-Vs-G4X" eventType="editingChanged" id="0py-xA-lzd"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="IUx-q1-GoG">
+                                        <rect key="frame" x="0.0" y="123" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IUx-q1-GoG" id="BWz-1r-3Rq">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="EEM-Vs-G4X" id="g26-i9-CbX"/>
+                            <outlet property="delegate" destination="EEM-Vs-G4X" id="MNg-XX-Aci"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="New Payment" id="b9A-Yj-TBi">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="mfK-9J-zkG">
+                            <connections>
+                                <segue destination="Zbh-c8-bpU" kind="unwind" unwindAction="unwindToToDoListWithSegue:" id="4BS-jn-i4H"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="mlF-YH-Seg">
+                            <connections>
+                                <segue destination="Zbh-c8-bpU" kind="unwind" identifier="saveUnwind" unwindAction="unwindToToDoListWithSegue:" id="Vdi-Uk-G5E"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="amountField" destination="Zj2-Rp-XOy" id="Peb-lN-MtC"/>
+                        <outlet property="contactNameField" destination="ZW8-gm-afx" id="BQT-IU-lt5"/>
+                        <outlet property="saveButton" destination="mlF-YH-Seg" id="Jlx-ud-Ei5"/>
+                        <outlet property="selectContactButton" destination="uJX-nN-NPe" id="PN9-C5-GW4"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GeZ-WU-Rhr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Zbh-c8-bpU" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1448.8" y="256.82158920539734"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Jkk-a2-m24">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WMZ-tT-zBl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="Ft8-F9-fbB" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0X9-Og-Y7T">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="EEM-Vs-G4X" kind="relationship" relationship="rootViewController" id="ArK-aY-wio"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="729" y="257"/>
         </scene>
         <!--Payment History-->
         <scene sceneID="XTp-1s-d7Z">
@@ -51,7 +178,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lOW-Fw-AFB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-406" y="433"/>
+            <point key="canvasLocation" x="-745" y="257"/>
         </scene>
     </scenes>
 </document>
