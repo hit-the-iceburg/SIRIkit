@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		081ACE621FC87AE200F3E418 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081ACE611FC87AE200F3E418 /* AppDelegate.swift */; };
-		081ACE641FC87AE200F3E418 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081ACE631FC87AE200F3E418 /* ViewController.swift */; };
 		081ACE671FC87AE200F3E418 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 081ACE651FC87AE200F3E418 /* Main.storyboard */; };
 		081ACE691FC87AE200F3E418 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 081ACE681FC87AE200F3E418 /* Assets.xcassets */; };
 		081ACE6C1FC87AE200F3E418 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 081ACE6A1FC87AE200F3E418 /* LaunchScreen.storyboard */; };
@@ -20,6 +19,9 @@
 		081ACEA61FC87BAE00F3E418 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 081ACEA41FC87BAE00F3E418 /* MainInterface.storyboard */; };
 		081ACEAA1FC87BAE00F3E418 /* SiriPaymentUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 081ACE9D1FC87BAE00F3E418 /* SiriPaymentUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		081ACEAD1FC87BAE00F3E418 /* SiriPayment.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 081ACE941FC87BAE00F3E418 /* SiriPayment.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		08C56D111FC97E81000B6345 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C56D101FC97E81000B6345 /* Payment.swift */; };
+		08C56D131FC97FA1000B6345 /* PaymentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C56D121FC97FA1000B6345 /* PaymentTableViewController.swift */; };
+		08C56D151FC99218000B6345 /* PaymentHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C56D141FC99218000B6345 /* PaymentHistoryModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +73,6 @@
 /* Begin PBXFileReference section */
 		081ACE5E1FC87AE200F3E418 /* WS1718SiriKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WS1718SiriKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		081ACE611FC87AE200F3E418 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		081ACE631FC87AE200F3E418 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		081ACE661FC87AE200F3E418 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		081ACE681FC87AE200F3E418 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		081ACE6B1FC87AE200F3E418 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -91,6 +92,9 @@
 		081ACEA21FC87BAE00F3E418 /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
 		081ACEA51FC87BAE00F3E418 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		081ACEA71FC87BAE00F3E418 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08C56D101FC97E81000B6345 /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
+		08C56D121FC97FA1000B6345 /* PaymentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTableViewController.swift; sourceTree = "<group>"; };
+		08C56D141FC99218000B6345 /* PaymentHistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentHistoryModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,11 +167,13 @@
 			children = (
 				081ACE8F1FC87AF900F3E418 /* WS1718SiriKit.entitlements */,
 				081ACE611FC87AE200F3E418 /* AppDelegate.swift */,
-				081ACE631FC87AE200F3E418 /* ViewController.swift */,
 				081ACE651FC87AE200F3E418 /* Main.storyboard */,
 				081ACE681FC87AE200F3E418 /* Assets.xcassets */,
 				081ACE6A1FC87AE200F3E418 /* LaunchScreen.storyboard */,
 				081ACE6D1FC87AE200F3E418 /* Info.plist */,
+				08C56D101FC97E81000B6345 /* Payment.swift */,
+				08C56D121FC97FA1000B6345 /* PaymentTableViewController.swift */,
+				08C56D141FC99218000B6345 /* PaymentHistoryModel.swift */,
 			);
 			path = WS1718SiriKit;
 			sourceTree = "<group>";
@@ -418,7 +424,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				081ACE641FC87AE200F3E418 /* ViewController.swift in Sources */,
+				08C56D151FC99218000B6345 /* PaymentHistoryModel.swift in Sources */,
+				08C56D131FC97FA1000B6345 /* PaymentTableViewController.swift in Sources */,
+				08C56D111FC97E81000B6345 /* Payment.swift in Sources */,
 				081ACE621FC87AE200F3E418 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
