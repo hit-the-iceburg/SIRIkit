@@ -21,12 +21,14 @@ class IntentHandler: INExtension {}
 
 extension IntentHandler : INSendPaymentIntentHandling {
     func handle(intent: INSendPaymentIntent, completion: @escaping (INSendPaymentIntentResponse) -> Void) {
+        print("siri doing something")
         guard let amount = intent.currencyAmount?.amount?.doubleValue
             else {
                 completion(INSendPaymentIntentResponse(code: .failure, userActivity: nil))
                 return
             }
         PaymentHistoryModel.addPayment(payee: "dummyname", amount: amount)
+        print("siri doing something")
         completion(INSendPaymentIntentResponse(code: .success, userActivity: nil))
         
     }

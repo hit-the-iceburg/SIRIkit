@@ -12,6 +12,10 @@ class PaymentHistoryModel {
     static let contacts = ["Sally","Susan","Ajay"]
     static var paymentHistory = [Payment]()
     
+    //debug
+    static var count = 0;
+    //debug
+    
     static func getPaymentHistory() -> [Payment] {
         return paymentHistory
     }
@@ -20,10 +24,18 @@ class PaymentHistoryModel {
         let newPayment = Payment(payee: payee, amount: amount)
         paymentHistory.append(newPayment)
         //might need to update the viewcontroller here
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "PaymentTableViewController"), object: nil)
+        
+        // debug
+         print("new payment added   "+newPayment.payee+": "+String(newPayment.amount))
     }
     static func addPayment(newPayment: Payment) {
         paymentHistory.append(newPayment)
         //might need to update the viewcontroller here
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "PaymentTableViewController"), object: nil)
+        
+        // debug
+        print("new payment added   "+newPayment.payee+": "+String(newPayment.amount))
     }
 
     static func deletePayment(rowNum: Int){

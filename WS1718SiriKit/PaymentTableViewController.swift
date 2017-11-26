@@ -9,16 +9,46 @@
 import Foundation
 import UIKit
 
+extension Notification.Name {
+    public static let myNotificationKey = Notification.Name(rawValue: "PaymentTableViewController")
+}
+
 class PaymentTableViewController : UITableViewController {
     
 //    var model = PaymentHistoryModel()
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.update(_:)), name: .myNotificationKey, object: nil)
+        //debug
+        print("notification registered")
+        //debug
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        // debug
         PaymentHistoryModel.loadSamplePaymentHistory()
         navigationItem.leftBarButtonItem = editButtonItem
         
+    }
+    
+    // Update function to be called when notification is received from the model
+    @objc func update(_ notification: Notification) {
+//        guard let text = notification.userInfo?["text"] as? String else { return }
+//        print ("text: \(text)")
+        //debug
+        print("notification received")
+        //debug
+        tableView.reloadData()
+        
+    }
+    
+    func displayPayment(payment : Payment){
+        let newIndexPath = IndexPath(row: PaymentHistoryModel.getPaymentHistory().count, section: 0)
+        PaymentHistoryModel.addPayment(newPayment: payment)
+        tableView.insertRows(at: [newIndexPath], with: .automatic)
     }
     
     
@@ -62,9 +92,12 @@ class PaymentTableViewController : UITableViewController {
         let sourceViewController = segue.source as! NewPaymentViewController
         
         if let payment = sourceViewController.payment {
-            let newIndexPath = IndexPath(row: PaymentHistoryModel.getPaymentHistory().count, section: 0)
+//            displayPayment(payment: payment)
             PaymentHistoryModel.addPayment(newPayment: payment)
-            tableView.insertRows(at: [newIndexPath], with: .automatic)
+            
+//            let newIndexPath = IndexPath(row: PaymentHistoryModel.getPaymentHistory().count, section: 0)
+//            PaymentHistoryModel.addPayment(newPayment: payment)
+//            tableView.insertRows(at: [newIndexPath], with: .automatic)
         }
     }
 
