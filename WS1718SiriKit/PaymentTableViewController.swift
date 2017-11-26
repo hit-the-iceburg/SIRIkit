@@ -15,20 +15,17 @@ extension Notification.Name {
 
 class PaymentTableViewController : UITableViewController {
     
-//    var model = PaymentHistoryModel()
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         NotificationCenter.default.addObserver(self, selector: #selector(self.update(_:)), name: .myNotificationKey, object: nil)
-        //debug
-        print("notification registered")
-        //debug
+
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // debug
+        
+        //problem might be here!!!!!  <<------------------------------test!
         PaymentHistoryModel.loadSamplePaymentHistory()
         navigationItem.leftBarButtonItem = editButtonItem
         
@@ -36,13 +33,7 @@ class PaymentTableViewController : UITableViewController {
     
     // Update function to be called when notification is received from the model
     @objc func update(_ notification: Notification) {
-//        guard let text = notification.userInfo?["text"] as? String else { return }
-//        print ("text: \(text)")
-        //debug
-        print("notification received")
-        //debug
         tableView.reloadData()
-        
     }
     
     func displayPayment(payment : Payment){
@@ -86,18 +77,14 @@ class PaymentTableViewController : UITableViewController {
         }
     }
     
+    
     // Receive and unwind values from NewPaymentViewController
     @IBAction func unwindToPaymentHistory(segue: UIStoryboardSegue) {
         guard segue.identifier == "saveUnwind" else { return }
         let sourceViewController = segue.source as! NewPaymentViewController
         
         if let payment = sourceViewController.payment {
-//            displayPayment(payment: payment)
             PaymentHistoryModel.addPayment(newPayment: payment)
-            
-//            let newIndexPath = IndexPath(row: PaymentHistoryModel.getPaymentHistory().count, section: 0)
-//            PaymentHistoryModel.addPayment(newPayment: payment)
-//            tableView.insertRows(at: [newIndexPath], with: .automatic)
         }
     }
 

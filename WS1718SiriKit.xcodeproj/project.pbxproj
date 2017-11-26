@@ -15,8 +15,6 @@
 		081ACEA01FC87BAE00F3E418 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 081ACE9F1FC87BAE00F3E418 /* IntentsUI.framework */; };
 		081ACEAA1FC87BAE00F3E418 /* SiriPaymentUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 081ACE9D1FC87BAE00F3E418 /* SiriPaymentUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		081ACEAD1FC87BAE00F3E418 /* SiriPayment.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 081ACE941FC87BAE00F3E418 /* SiriPayment.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		083E13EF1FCB231300194B24 /* NewPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C56D161FC9D05D000B6345 /* NewPaymentViewController.swift */; };
-		083E13F01FCB231A00194B24 /* PaymentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C56D121FC97FA1000B6345 /* PaymentTableViewController.swift */; };
 		086D7D681FCAD3D3005D0404 /* PaymentHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C56D141FC99218000B6345 /* PaymentHistoryModel.swift */; };
 		086D7D691FCAD3D9005D0404 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C56D101FC97E81000B6345 /* Payment.swift */; };
 		08C56D111FC97E81000B6345 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C56D101FC97E81000B6345 /* Payment.swift */; };
@@ -414,11 +412,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				083E13EF1FCB231300194B24 /* NewPaymentViewController.swift in Sources */,
 				081ACE971FC87BAE00F3E418 /* IntentHandler.swift in Sources */,
 				086D7D691FCAD3D9005D0404 /* Payment.swift in Sources */,
 				086D7D681FCAD3D3005D0404 /* PaymentHistoryModel.swift in Sources */,
-				083E13F01FCB231A00194B24 /* PaymentTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

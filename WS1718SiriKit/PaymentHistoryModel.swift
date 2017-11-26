@@ -20,18 +20,21 @@ class PaymentHistoryModel {
         return paymentHistory
     }
     
+
     static func addPayment(payee: String, amount: Double) {
         let newPayment = Payment(payee: payee, amount: amount)
         paymentHistory.append(newPayment)
-        //might need to update the viewcontroller here
+
+        // Send a notification to the viewcontroller, which will call its update function
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "PaymentTableViewController"), object: nil)
-        
+
         // debug
          print("new payment added   "+newPayment.payee+": "+String(newPayment.amount))
     }
     static func addPayment(newPayment: Payment) {
         paymentHistory.append(newPayment)
-        //might need to update the viewcontroller here
+        
+        // Send a notification to the viewcontroller, which will call its update function
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "PaymentTableViewController"), object: nil)
         
         // debug
