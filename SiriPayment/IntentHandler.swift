@@ -19,8 +19,20 @@ import Intents
 
 class IntentHandler: INExtension {}
 
+extension IntentHandler : INSendPaymentIntentHandling {
+    func handle(intent: INSendPaymentIntent, completion: @escaping (INSendPaymentIntentResponse) -> Void) {
+        guard let amount = intent.currencyAmount?.amount?.doubleValue
+            else {
+                completion(INSendPaymentIntentResponse(code: .failure, userActivity: nil))
+                return
+            }
+        PaymentHistoryModel.addPayment(payee: "dummyname", amount: amount)
+        completion(INSendPaymentIntentResponse(code: .success, userActivity: nil))
+        
+    }
 
-    
+}
+
 
     
     
