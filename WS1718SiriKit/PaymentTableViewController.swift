@@ -56,6 +56,7 @@ class PaymentTableViewController : UITableViewController {
         }
     }
     
+    // Receive values from NewPaymentViewController
     @IBAction func unwindToPaymentHistory(segue: UIStoryboardSegue) {
         guard segue.identifier == "saveUnwind" else { return }
         let sourceViewController = segue.source as! NewPaymentViewController
