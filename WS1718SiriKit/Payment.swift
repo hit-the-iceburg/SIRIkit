@@ -11,8 +11,9 @@ import Foundation
 struct Payment{
     var payee : String
     var amount : Double
+    
 //    var currency : String
-//    var time : String        //???
+//    var time : String
     
 
 }

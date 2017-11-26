@@ -11,12 +11,12 @@ import UIKit
 
 class PaymentTableViewController : UITableViewController {
     
-    var model = PaymentHistoryModel()
+//    var model = PaymentHistoryModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        model.loadSamplePaymentHistory()
+        PaymentHistoryModel.loadSamplePaymentHistory()
         navigationItem.leftBarButtonItem = editButtonItem
         
     }
@@ -26,7 +26,7 @@ class PaymentTableViewController : UITableViewController {
     override func tableView(_ tableView: UITableView,
                                numberOfRowsInSection section: Int) -> Int
     {
-        return model.getPaymentHistory().count
+        return PaymentHistoryModel.getPaymentHistory().count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt
         indexPath: IndexPath) -> UITableViewCell {
@@ -36,7 +36,7 @@ class PaymentTableViewController : UITableViewController {
                     fatalError("Could not dequeue a cell")
         }
         
-        let payment = model.getPaymentHistory()[indexPath.row]
+        let payment = PaymentHistoryModel.getPaymentHistory()[indexPath.row]
         cell.textLabel?.text = payment.payee + ": " + String(payment.amount)
         return cell
     }
@@ -51,19 +51,19 @@ class PaymentTableViewController : UITableViewController {
         IndexPath) {
         if editingStyle == .delete {
             // hand this over to the model
-            model.deletePayment(rowNum: indexPath.row)
+            PaymentHistoryModel.deletePayment(rowNum: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
     
-    // Receive values from NewPaymentViewController
+    // Receive and unwind values from NewPaymentViewController
     @IBAction func unwindToPaymentHistory(segue: UIStoryboardSegue) {
         guard segue.identifier == "saveUnwind" else { return }
         let sourceViewController = segue.source as! NewPaymentViewController
         
         if let payment = sourceViewController.payment {
-            let newIndexPath = IndexPath(row: model.getPaymentHistory().count, section: 0)
-            model.addPayment(newPayment: payment)
+            let newIndexPath = IndexPath(row: PaymentHistoryModel.getPaymentHistory().count, section: 0)
+            PaymentHistoryModel.addPayment(newPayment: payment)
             tableView.insertRows(at: [newIndexPath], with: .automatic)
         }
     }

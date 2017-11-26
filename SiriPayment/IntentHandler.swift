@@ -125,6 +125,6 @@ class IntentHandler: INExtension {}
 //        let userActivity = NSUserActivity(activityType: NSStringFromClass(INSetMessageAttributeIntent.self))
 //        let response = INSetMessageAttributeIntentResponse(code: .success, userActivity: userActivity)
 //        completion(response)
-//    }
+
 
 
