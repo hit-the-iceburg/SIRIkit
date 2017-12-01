@@ -30,6 +30,7 @@ class PaymentHistoryModel {
 
         // debug
          print("new payment added   "+newPayment.payee+": "+String(newPayment.amount))
+         print("notification sent")
     }
     static func addPayment(newPayment: Payment) {
         paymentHistory.append(newPayment)

@@ -23,6 +23,9 @@ class IntentHandler: INExtension {}
      1) "Add the Siri feature to your app ID" fail
      2) My personal iphone is not authorized? Can't use it to test the app
      3) Why doesn't the payment added in IntentHandler by Siri show up in the UI?
+ 
+ Notes:
+ 1) Prezi: projector 16:9
  **/
 
 extension IntentHandler : INSendPaymentIntentHandling {

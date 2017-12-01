@@ -18,14 +18,14 @@ class PaymentTableViewController : UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         NotificationCenter.default.addObserver(self, selector: #selector(self.update(_:)), name: .myNotificationKey, object: nil)
-
+        //debug
+        print("VC registered in notification center")
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //problem might be here!!!!!  <<------------------------------test!
         PaymentHistoryModel.loadSamplePaymentHistory()
         navigationItem.leftBarButtonItem = editButtonItem
         
@@ -33,6 +33,9 @@ class PaymentTableViewController : UITableViewController {
     
     // Update function to be called when notification is received from the model
     @objc func update(_ notification: Notification) {
+        //debug
+        print("update function called")
+        //debug
         tableView.reloadData()
     }
     

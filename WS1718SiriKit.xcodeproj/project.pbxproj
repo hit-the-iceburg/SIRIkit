@@ -13,14 +13,14 @@
 		081ACE6C1FC87AE200F3E418 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 081ACE6A1FC87AE200F3E418 /* LaunchScreen.storyboard */; };
 		081ACE971FC87BAE00F3E418 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081ACE961FC87BAE00F3E418 /* IntentHandler.swift */; };
 		081ACEA01FC87BAE00F3E418 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 081ACE9F1FC87BAE00F3E418 /* IntentsUI.framework */; };
-		081ACEAA1FC87BAE00F3E418 /* SiriPaymentUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 081ACE9D1FC87BAE00F3E418 /* SiriPaymentUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		081ACEAD1FC87BAE00F3E418 /* SiriPayment.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 081ACE941FC87BAE00F3E418 /* SiriPayment.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		086D7D681FCAD3D3005D0404 /* PaymentHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C56D141FC99218000B6345 /* PaymentHistoryModel.swift */; };
 		086D7D691FCAD3D9005D0404 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C56D101FC97E81000B6345 /* Payment.swift */; };
 		08C56D111FC97E81000B6345 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C56D101FC97E81000B6345 /* Payment.swift */; };
 		08C56D131FC97FA1000B6345 /* PaymentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C56D121FC97FA1000B6345 /* PaymentTableViewController.swift */; };
 		08C56D151FC99218000B6345 /* PaymentHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C56D141FC99218000B6345 /* PaymentHistoryModel.swift */; };
 		08C56D171FC9D05E000B6345 /* NewPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C56D161FC9D05D000B6345 /* NewPaymentViewController.swift */; };
+		08D2AC491FCC67CF004672BA /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 081ACE9F1FC87BAE00F3E418 /* IntentsUI.framework */; };
+		08D2AC5D1FCC682F004672BA /* PaymentHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C56D141FC99218000B6345 /* PaymentHistoryModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,13 +37,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 081ACE5D1FC87AE200F3E418;
 			remoteInfo = WS1718SiriKit;
-		};
-		081ACEA81FC87BAE00F3E418 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 081ACE561FC87AE100F3E418 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 081ACE9C1FC87BAE00F3E418;
-			remoteInfo = SiriPaymentUI;
 		};
 		081ACEAB1FC87BAE00F3E418 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -62,7 +55,6 @@
 			dstSubfolderSpec = 13;
 			files = (
 				081ACEAD1FC87BAE00F3E418 /* SiriPayment.appex in Embed App Extensions */,
-				081ACEAA1FC87BAE00F3E418 /* SiriPaymentUI.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,6 +80,8 @@
 		08C56D121FC97FA1000B6345 /* PaymentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTableViewController.swift; sourceTree = "<group>"; };
 		08C56D141FC99218000B6345 /* PaymentHistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentHistoryModel.swift; sourceTree = "<group>"; };
 		08C56D161FC9D05D000B6345 /* NewPaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPaymentViewController.swift; sourceTree = "<group>"; };
+		08D2AC3F1FCC67CF004672BA /* abc.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = abc.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		08D2AC481FCC67CF004672BA /* abcUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = abcUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +121,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		08D2AC3C1FCC67CF004672BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08D2AC451FCC67CF004672BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08D2AC491FCC67CF004672BA /* IntentsUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -148,6 +157,8 @@
 				081ACE7D1FC87AE200F3E418 /* WS1718SiriKitUITests.xctest */,
 				081ACE941FC87BAE00F3E418 /* SiriPayment.appex */,
 				081ACE9D1FC87BAE00F3E418 /* SiriPaymentUI.appex */,
+				08D2AC3F1FCC67CF004672BA /* abc.appex */,
+				08D2AC481FCC67CF004672BA /* abcUI.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -201,7 +212,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				081ACEA91FC87BAE00F3E418 /* PBXTargetDependency */,
 				081ACEAC1FC87BAE00F3E418 /* PBXTargetDependency */,
 			);
 			name = WS1718SiriKit;
@@ -279,6 +289,40 @@
 			productReference = 081ACE9D1FC87BAE00F3E418 /* SiriPaymentUI.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		08D2AC3E1FCC67CF004672BA /* abc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 08D2AC5A1FCC67D0004672BA /* Build configuration list for PBXNativeTarget "abc" */;
+			buildPhases = (
+				08D2AC3B1FCC67CF004672BA /* Sources */,
+				08D2AC3C1FCC67CF004672BA /* Frameworks */,
+				08D2AC3D1FCC67CF004672BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = abc;
+			productName = abc;
+			productReference = 08D2AC3F1FCC67CF004672BA /* abc.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		08D2AC471FCC67CF004672BA /* abcUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 08D2AC571FCC67D0004672BA /* Build configuration list for PBXNativeTarget "abcUI" */;
+			buildPhases = (
+				08D2AC441FCC67CF004672BA /* Sources */,
+				08D2AC451FCC67CF004672BA /* Frameworks */,
+				08D2AC461FCC67CF004672BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = abcUI;
+			productName = abcUI;
+			productReference = 08D2AC481FCC67CF004672BA /* abcUI.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -316,6 +360,14 @@
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
 					};
+					08D2AC3E1FCC67CF004672BA = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					08D2AC471FCC67CF004672BA = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 081ACE591FC87AE100F3E418 /* Build configuration list for PBXProject "WS1718SiriKit" */;
@@ -336,6 +388,8 @@
 				081ACE7C1FC87AE200F3E418 /* WS1718SiriKitUITests */,
 				081ACE931FC87BAE00F3E418 /* SiriPayment */,
 				081ACE9C1FC87BAE00F3E418 /* SiriPaymentUI */,
+				08D2AC3E1FCC67CF004672BA /* abc */,
+				08D2AC471FCC67CF004672BA /* abcUI */,
 			);
 		};
 /* End PBXProject section */
@@ -379,6 +433,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		08D2AC3D1FCC67CF004672BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08D2AC461FCC67CF004672BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -414,11 +482,25 @@
 			files = (
 				081ACE971FC87BAE00F3E418 /* IntentHandler.swift in Sources */,
 				086D7D691FCAD3D9005D0404 /* Payment.swift in Sources */,
-				086D7D681FCAD3D3005D0404 /* PaymentHistoryModel.swift in Sources */,
+				08D2AC5D1FCC682F004672BA /* PaymentHistoryModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		081ACE991FC87BAE00F3E418 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08D2AC3B1FCC67CF004672BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		08D2AC441FCC67CF004672BA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -437,11 +519,6 @@
 			isa = PBXTargetDependency;
 			target = 081ACE5D1FC87AE200F3E418 /* WS1718SiriKit */;
 			targetProxy = 081ACE7E1FC87AE200F3E418 /* PBXContainerItemProxy */;
-		};
-		081ACEA91FC87BAE00F3E418 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 081ACE9C1FC87BAE00F3E418 /* SiriPaymentUI */;
-			targetProxy = 081ACEA81FC87BAE00F3E418 /* PBXContainerItemProxy */;
 		};
 		081ACEAC1FC87BAE00F3E418 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -737,6 +814,66 @@
 			};
 			name = Release;
 		};
+		08D2AC581FCC67D0004672BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W88773838E;
+				INFOPLIST_FILE = abcUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.rwth-aachen.hci.WS1718SiriKit.abcUI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		08D2AC591FCC67D0004672BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W88773838E;
+				INFOPLIST_FILE = abcUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.rwth-aachen.hci.WS1718SiriKit.abcUI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		08D2AC5B1FCC67D0004672BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W88773838E;
+				INFOPLIST_FILE = abc/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.rwth-aachen.hci.WS1718SiriKit.abc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		08D2AC5C1FCC67D0004672BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W88773838E;
+				INFOPLIST_FILE = abc/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.rwth-aachen.hci.WS1718SiriKit.abc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -790,6 +927,24 @@
 			buildConfigurations = (
 				081ACEB21FC87BAE00F3E418 /* Debug */,
 				081ACEB31FC87BAE00F3E418 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		08D2AC571FCC67D0004672BA /* Build configuration list for PBXNativeTarget "abcUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08D2AC581FCC67D0004672BA /* Debug */,
+				08D2AC591FCC67D0004672BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		08D2AC5A1FCC67D0004672BA /* Build configuration list for PBXNativeTarget "abc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08D2AC5B1FCC67D0004672BA /* Debug */,
+				08D2AC5C1FCC67D0004672BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
