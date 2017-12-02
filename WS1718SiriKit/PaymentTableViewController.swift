@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Intents
 
 extension Notification.Name {
     public static let myNotificationKey = Notification.Name(rawValue: "PaymentTableViewController")
@@ -17,26 +18,41 @@ class PaymentTableViewController : UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.update(_:)), name: .myNotificationKey, object: nil)
-        //debug
-        print("VC registered in notification center")
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.update), name: .myNotificationKey, object: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        PaymentHistoryModel.loadSamplePaymentHistory()
-        navigationItem.leftBarButtonItem = editButtonItem
+        // refresh table listener
+        refreshControl = UIRefreshControl()
+        refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl?.addTarget(self, action: #selector(self.update), for: UIControlEvents.valueChanged)
         
+        // refresh when app comes back to foreground
+        NotificationCenter.default.addObserver(self, selector: #selector(self.update), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil )
+        
+        
+        // load payment history for first time
+        PaymentHistoryModel.loadPaymentHistory()
+        
+        // sample contact names - for siri's understanding
+        let names = ["Ajay","Sally","Sussane","John","Dave"]
+        INVocabulary.shared().setVocabularyStrings(NSOrderedSet(array: names), of: .contactName)
+        
+        navigationItem.leftBarButtonItem = editButtonItem
     }
     
     // Update function to be called when notification is received from the model
-    @objc func update(_ notification: Notification) {
-        //debug
-        print("update function called")
-        //debug
+    @objc func update() {
+        // re-load payment history
+        PaymentHistoryModel.loadPaymentHistory()
+        
+        // update table
         tableView.reloadData()
+        
+        // notify refresh control to end refresh spinner
+        refreshControl?.endRefreshing()
     }
     
     func displayPayment(payment : Payment){

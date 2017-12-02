@@ -69,8 +69,12 @@
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "2">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "1"
+         BundleIdentifier = "de.rwth-aachen.hci.WS1718SiriKit"
+         RemotePath = "/Users/manasbhardwaj/Library/Developer/CoreSimulator/Devices/8323AE01-F49E-4E77-9E72-1AC0080DC802/data/Containers/Bundle/Application/A7897390-173C-4CFA-8CDA-8CAF84632950/WS1718SiriKit.app">
+      </RemoteRunnable>
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "081ACE5D1FC87AE200F3E418"
@@ -78,7 +82,7 @@
             BlueprintName = "WS1718SiriKit"
             ReferencedContainer = "container:WS1718SiriKit.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

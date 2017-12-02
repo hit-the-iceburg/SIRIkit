@@ -55,9 +55,4 @@ class NewPaymentViewController : UITableViewController {
         contactNameField.resignFirstResponder()
     }
 
-    
-    
-    
-
-    
 }
