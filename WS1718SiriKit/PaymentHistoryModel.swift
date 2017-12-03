@@ -9,20 +9,10 @@
 import Foundation
 
 class PaymentHistoryModel {
-    //hard coding contact list for now
+    //hard-coded contact list
     static let contacts = ["Sally","Susan","Ajay","John Smith","John Green","Dave","Avocado"]
     static var paymentHistory = [Payment]()
-    
-    //returns an array of [INPerson] matched from a (partial) name, for disambuation in sirikit
-    static func matchContacts(partialName: String) -> [String]{
-        var result = [String]()
-        for contact in contacts{
-            if contact.range(of: partialName, options: .caseInsensitive) != nil {
-                result.append(contact)
-            }
-        }
-        return result
-    }
+
     
     static func getPaymentHistory() -> [Payment] {
         return paymentHistory
@@ -124,6 +114,17 @@ class PaymentHistoryModel {
                 print("Error loading contents of:", fileURL, error)
             }
         return ""
+    }
+    
+    //returns an array of [String] matched from a (partial) name, for disambuation in sirikit
+    static func matchContacts(partialName: String) -> [String]{
+        var result = [String]()
+        for contact in contacts{
+            if contact.range(of: partialName, options: .caseInsensitive) != nil {
+                result.append(contact)
+            }
+        }
+        return result
     }
 
 }
