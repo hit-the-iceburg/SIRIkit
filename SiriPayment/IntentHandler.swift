@@ -26,28 +26,71 @@ class IntentHandler: INExtension {}
  **/
 
 extension IntentHandler : INSendPaymentIntentHandling {
+    
+    //resolving payee
+    func resolvePayee(for intent: INSendPaymentIntent, with completion: @escaping (INSendPaymentPayeeResolutionResult) -> Void) {
+        if let payee = intent.payee {
+            let matchedContacts = PaymentHistoryModel.matchContacts(partialName: payee.displayName)
+            
+            switch matchedContacts.count {
+            case 0:
+                completion(INSendPaymentPayeeResolutionResult.unsupported(forReason: .noAccount))
+            
+            case 1:
+                completion(INSendPaymentPayeeResolutionResult.success(with: payee))
+                
+            case 2 ... Int.max:
+                var possiblePayees = [INPerson]()
+                for contact in matchedContacts {
+                    let person = INPerson.init(personHandle: INPersonHandle.init(value: contact, type: INPersonHandleType.unknown), nameComponents: nil, displayName: contact, image: nil, contactIdentifier: nil, customIdentifier: nil)
+                    possiblePayees.append(person)
+                }
+                completion(INSendPaymentPayeeResolutionResult.disambiguation(with: possiblePayees))
+                
+            default:
+                break
+            }
+            
+            //            if(PaymentHistoryModel.contacts.contains(payee.displayName)){
+            //                completion(INSendPaymentPayeeResolutionResult.success(with: payee))
+            //            }
+            //            else {
+            //                completion(INSendPaymentPayeeResolutionResult.unsupported(forReason: .noAccount))
+            //            }
+            
+        }
+        else {
+            completion(INSendPaymentPayeeResolutionResult.needsValue())
+        }
+    }
+    
+    //resolving amount
+    func resolveCurrencyAmount(for intent: INSendPaymentIntent, with completion: @escaping (INSendPaymentCurrencyAmountResolutionResult) -> Void) {
+        
+        //need to test how it acts without a value. This one might not have
+        if let amount = intent.currencyAmount {
+                completion(INSendPaymentCurrencyAmountResolutionResult.success(with: amount))
+        }
+        else {
+                completion(INSendPaymentCurrencyAmountResolutionResult.needsValue())
+        }
+    }
+    
+    //might want to add confirm
+
+    
     func handle(intent: INSendPaymentIntent, completion: @escaping (INSendPaymentIntentResponse) -> Void) {
-        guard let amount = intent.currencyAmount?.amount?.doubleValue
-            else {
+        guard let amount = intent.currencyAmount?.amount?.doubleValue,
+              let payee = intent.payee?.displayName
+        else {
                 completion(INSendPaymentIntentResponse(code: .failure, userActivity: nil))
                 return
-            }
-    
-        // fetch name from intent. If there is no name, set name to Myself
-        let intendedName = intent.payee?.displayName
-        var payeeName = "Myself"
-        if((intendedName?.isEmpty)==false){
-            payeeName = intendedName!
         }
-        PaymentHistoryModel.addPayment(payee: payeeName, amount: amount)
         
-        // print how siri parsed the voice command
-        print(intent)
-        
+        PaymentHistoryModel.addPayment(payee: payee, amount: amount)
         completion(INSendPaymentIntentResponse(code: .success, userActivity:nil))
-        
     }
-
+    
 }
 
 

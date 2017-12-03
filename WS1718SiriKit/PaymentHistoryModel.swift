@@ -7,20 +7,27 @@
 //
 
 import Foundation
+
 class PaymentHistoryModel {
     //hard coding contact list for now
-    static let contacts = ["Sally","Susan","Ajay"]
+    static let contacts = ["Sally","Susan","Ajay","John Smith","John Green","Dave","Avocado"]
     static var paymentHistory = [Payment]()
     
-    //debug
-    static var count = 0;
-    //debug
+    //returns an array of [INPerson] matched from a (partial) name, for disambuation in sirikit
+    static func matchContacts(partialName: String) -> [String]{
+        var result = [String]()
+        for contact in contacts{
+            if contact.range(of: partialName, options: .caseInsensitive) != nil {
+                result.append(contact)
+            }
+        }
+        return result
+    }
     
     static func getPaymentHistory() -> [Payment] {
         return paymentHistory
     }
     
-
     static func addPayment(payee: String, amount: Double) {
         let newPayment = Payment(payee: payee, amount: amount)
         paymentHistory.append(newPayment)
@@ -55,8 +62,8 @@ class PaymentHistoryModel {
     
     static func loadPaymentHistory() {
         // load sample payments
-        let payment1 = Payment(payee: "Sally Bebawi", amount: 50)
-        let payment2 = Payment(payee: "Susan Xue", amount: 20)
+        let payment1 = Payment(payee: "Sally", amount: 50)
+        let payment2 = Payment(payee: "Susan", amount: 20)
         let payment3 = Payment(payee: "Ajay", amount: 30)
         
         // add sample payments to history
@@ -86,7 +93,7 @@ class PaymentHistoryModel {
         let documentDirectory = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.rwth.siri")
         
         // create the destination url for the text file to be saved
-        let fileURL = documentDirectory!.appendingPathComponent("siri_history5.txt")
+        let fileURL = documentDirectory!.appendingPathComponent("siri_history6.txt")
         
         let text = readFile()+data
         do {
@@ -105,7 +112,7 @@ class PaymentHistoryModel {
          let documentDirectory = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.rwth.siri")
         
         // create the destination url for the text file to be read
-        let fileURL = documentDirectory!.appendingPathComponent("siri_history5.txt")
+        let fileURL = documentDirectory!.appendingPathComponent("siri_history6.txt")
             // reading from disk
             do {
                 let fileContents = try String(contentsOf: fileURL)

@@ -36,10 +36,6 @@ class PaymentTableViewController : UITableViewController {
         // load payment history for first time
         PaymentHistoryModel.loadPaymentHistory()
         
-        // sample contact names - for siri's understanding
-        let names = ["Ajay","Sally","Sussane","John","Dave"]
-        INVocabulary.shared().setVocabularyStrings(NSOrderedSet(array: names), of: .contactName)
-        
         navigationItem.leftBarButtonItem = editButtonItem
     }
     

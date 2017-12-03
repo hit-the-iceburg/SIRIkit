@@ -20,6 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        
         // Request for Siri usage
         INPreferences.requestSiriAuthorization { (status) in }
+        
+//        // sample contact names - for siri's understanding
+//        INVocabulary.shared().setVocabularyStrings(NSOrderedSet(array: PaymentHistoryModel.contacts), of: .contactName)
+        
         return true
 
     }
