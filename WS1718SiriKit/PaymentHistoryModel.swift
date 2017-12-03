@@ -120,7 +120,7 @@ class PaymentHistoryModel {
     static func matchContacts(partialName: String) -> [String]{
         var result = [String]()
         for contact in contacts{
-            if contact.range(of: partialName, options: .caseInsensitive) != nil {
+            if contact.localizedCaseInsensitiveContains(partialName) {
                 result.append(contact)
             }
         }

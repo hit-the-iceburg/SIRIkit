@@ -8,22 +8,7 @@
 
 import Intents
 
-// As an example, this class is set up to handle Message intents.
-// You will want to replace this or add other intents as appropriate.
-// The intents you wish to handle must be declared in the extension's Info.plist.
-
-// You can test your example integration by saying things to Siri like:
-// "Send a message using <myApp>"
-// "<myApp> John saying hello"
-// "Search for messages in <myApp>"
-
 class IntentHandler: INExtension {}
-
-/** Questions to ask:
-     1) "Add the Siri feature to your app ID" fail
-     2) My personal iphone is not authorized? Can't use it to test the app
-     3) Why doesn't the payment added in IntentHandler by Siri show up in the UI?
- **/
 
 extension IntentHandler : INSendPaymentIntentHandling {
     
@@ -33,16 +18,17 @@ extension IntentHandler : INSendPaymentIntentHandling {
             let matchedContacts = PaymentHistoryModel.matchContacts(partialName: payee.displayName)
             
             switch matchedContacts.count {
+            // case payee doesn't exist in our contact list
             case 0:
                 completion(INSendPaymentPayeeResolutionResult.unsupported(forReason: .noAccount))
-            
+            // case we match the payee exactly
             case 1:
                 completion(INSendPaymentPayeeResolutionResult.success(with: payee))
-                
+            // case we have more than one possible match, need user to choose the correct one
             case 2 ... Int.max:
                 var possiblePayees = [INPerson]()
                 for contact in matchedContacts {
-                    let person = INPerson.init(personHandle: INPersonHandle.init(value: contact, type: INPersonHandleType.unknown), nameComponents: nil, displayName: contact, image: nil, contactIdentifier: nil, customIdentifier: nil)
+                    let person = INPerson.init(personHandle: INPersonHandle.init(value: contact, type: INPersonHandleType.unknown), nameComponents: nil, displayName: nil, image: nil, contactIdentifier: nil, customIdentifier: nil)
                     possiblePayees.append(person)
                 }
                 completion(INSendPaymentPayeeResolutionResult.disambiguation(with: possiblePayees))
@@ -50,24 +36,15 @@ extension IntentHandler : INSendPaymentIntentHandling {
             default:
                 break
             }
-            
-            //            if(PaymentHistoryModel.contacts.contains(payee.displayName)){
-            //                completion(INSendPaymentPayeeResolutionResult.success(with: payee))
-            //            }
-            //            else {
-            //                completion(INSendPaymentPayeeResolutionResult.unsupported(forReason: .noAccount))
-            //            }
-            
         }
-        else {
+        else {  // user didn't provide a payee, prompt them to do so
             completion(INSendPaymentPayeeResolutionResult.needsValue())
         }
     }
     
-    //resolving amount
+    //resolving payment amount
     func resolveCurrencyAmount(for intent: INSendPaymentIntent, with completion: @escaping (INSendPaymentCurrencyAmountResolutionResult) -> Void) {
         
-        //need to test how it acts without a value. This one might not have
         if let amount = intent.currencyAmount {
                 completion(INSendPaymentCurrencyAmountResolutionResult.success(with: amount))
         }
@@ -76,9 +53,10 @@ extension IntentHandler : INSendPaymentIntentHandling {
         }
     }
     
-    //might want to add confirm
-
+    // Confirm could be added for, say, authentication purposes. In our case we don't need one since we are only making dummy payments
     
+    
+    // Actual handling of the payment
     func handle(intent: INSendPaymentIntent, completion: @escaping (INSendPaymentIntentResponse) -> Void) {
         guard let amount = intent.currencyAmount?.amount?.doubleValue,
               let payee = intent.payee?.displayName
