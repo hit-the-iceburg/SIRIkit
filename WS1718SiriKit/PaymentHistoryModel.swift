@@ -83,7 +83,7 @@ class PaymentHistoryModel {
         let documentDirectory = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.rwth.siri")
         
         // create the destination url for the text file to be saved
-        let fileURL = documentDirectory!.appendingPathComponent("siri_history6.txt")
+        let fileURL = documentDirectory!.appendingPathComponent("siri_history7.txt")
         
         let text = readFile()+data
         do {
@@ -102,7 +102,7 @@ class PaymentHistoryModel {
          let documentDirectory = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.rwth.siri")
         
         // create the destination url for the text file to be read
-        let fileURL = documentDirectory!.appendingPathComponent("siri_history6.txt")
+        let fileURL = documentDirectory!.appendingPathComponent("siri_history7.txt")
             // reading from disk
             do {
                 let fileContents = try String(contentsOf: fileURL)

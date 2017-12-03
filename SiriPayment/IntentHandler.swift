@@ -53,7 +53,12 @@ extension IntentHandler : INSendPaymentIntentHandling {
         }
     }
     
-    // Confirm could be added for, say, authentication purposes. In our case we don't need one since we are only making dummy payments
+    // Confirm. In our case we don't need one since we are only making dummy payments, but it can be used for many purposes:
+    func confirm(intent: INSendPaymentIntent, completion: @escaping (INSendPaymentIntentResponse) -> Void) {
+        // check network status
+        // check authentication status from the user
+        completion(INSendPaymentIntentResponse(code: .success, userActivity: nil))
+    }
     
     
     // Actual handling of the payment
